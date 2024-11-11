@@ -11,11 +11,11 @@ function updateCountup() {
     const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-    // Display the countdown on the page
+    // Display the countup on the page
     document.getElementById('countup').innerHTML =
         `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-    // Update the countdown every second
+    // Update the countup every second
     setTimeout(updateCountup, 1000);
 }
 
@@ -30,6 +30,6 @@ window.onload = function() {
         ticks: 300,          // Number of frames
     });
 
-    // Call the countdown function
+    // Call the countup function
     updateCountup();
 };
