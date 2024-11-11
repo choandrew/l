@@ -1,9 +1,9 @@
 // Countdown timer functionality
-function updateCountdown() {
-    const targetDate = new Date("December 15, 2024 00:00:00"); // Set the target date (her birthday)
+function updateCountup() {
+    const targetDate = new Date("December 29, 2023 07:15:00"); // Set the target date (her birthday)
     const currentDate = new Date();
     
-    const timeDifference = targetDate - currentDate;
+    const timeDifference = currentDate - targetDate ;
 
     // Calculate the time remaining in days, hours, minutes, and seconds
     const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
@@ -12,7 +12,7 @@ function updateCountdown() {
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
     // Display the countdown on the page
-    document.getElementById('countdown').innerHTML =
+    document.getElementById('countup').innerHTML =
         `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
     // Update the countdown every second
@@ -20,5 +20,5 @@ function updateCountdown() {
 }
 
 // Initialize the countdown
-updateCountdown();
+updateCountup();
 
