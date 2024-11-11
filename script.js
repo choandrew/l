@@ -19,6 +19,17 @@ function updateCountup() {
     setTimeout(updateCountdown, 1000);
 }
 
-// Initialize the countdown
-updateCountup();
+window.onload = function() {
+    // Create confetti burst effect when the page loads
+    confetti({
+        particleCount: 200,  // Number of confetti pieces
+        spread: 90,          // Spread angle of confetti
+        origin: { y: 0.6 },  // Confetti will start slightly below the top
+        colors: ['#ff00ff', '#ffcc00', '#00ccff', '#ff6666', '#00ff00'], // Confetti colors
+        gravity: 0.5,        // Gravity of the confetti
+        ticks: 300,          // Number of frames
+    });
 
+    // Call the countdown function
+    updateCountup();
+};
