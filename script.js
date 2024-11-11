@@ -16,7 +16,7 @@ function updateCountup() {
         `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
     // Update the countdown every second
-    setTimeout(updateCountdown, 1000);
+    setTimeout(updateCountup, 1000);
 }
 
 window.onload = function() {
